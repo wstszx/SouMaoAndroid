@@ -27,33 +27,33 @@ public final class R {
         public static int x_loadingLayoutId = 0x7f01014c;
     }
     public static final class color {
-        public static int x_blue = 0x7f0d0049;
-        public static int x_green = 0x7f0d004a;
-        public static int x_red = 0x7f0d004b;
-        public static int x_yellow = 0x7f0d004c;
+        public static int x_blue = 0x7f0b0046;
+        public static int x_green = 0x7f0b0047;
+        public static int x_red = 0x7f0b0048;
+        public static int x_yellow = 0x7f0b0049;
     }
     public static final class dimen {
-        public static int item_touch_helper_max_drag_scroll_per_frame = 0x7f090098;
-        public static int item_touch_helper_swipe_escape_max_velocity = 0x7f090099;
-        public static int item_touch_helper_swipe_escape_velocity = 0x7f09009a;
+        public static int item_touch_helper_max_drag_scroll_per_frame = 0x7f070098;
+        public static int item_touch_helper_swipe_escape_max_velocity = 0x7f070099;
+        public static int item_touch_helper_swipe_escape_velocity = 0x7f07009a;
     }
     public static final class id {
-        public static int insideInset = 0x7f0e0049;
-        public static int insideOverlay = 0x7f0e004a;
-        public static int item_touch_helper_previous_elevation = 0x7f0e0005;
-        public static int outsideInset = 0x7f0e004b;
-        public static int outsideOverlay = 0x7f0e004c;
-        public static int progressBar = 0x7f0e00af;
-        public static int recyclerView = 0x7f0e00b2;
-        public static int swipeRefreshLayout = 0x7f0e00b1;
-        public static int tv_msg = 0x7f0e00b0;
+        public static int insideInset = 0x7f0c0049;
+        public static int insideOverlay = 0x7f0c004a;
+        public static int item_touch_helper_previous_elevation = 0x7f0c0005;
+        public static int outsideInset = 0x7f0c004b;
+        public static int outsideOverlay = 0x7f0c004c;
+        public static int progressBar = 0x7f0c00af;
+        public static int recyclerView = 0x7f0c00b2;
+        public static int swipeRefreshLayout = 0x7f0c00b1;
+        public static int tv_msg = 0x7f0c00b0;
     }
     public static final class layout {
-        public static int x_view_footer_load_more_simple = 0x7f04003f;
-        public static int x_view_recycler_content_layout = 0x7f040040;
+        public static int x_view_footer_load_more_simple = 0x7f03003f;
+        public static int x_view_recycler_content_layout = 0x7f030040;
     }
     public static final class string {
-        public static int app_name = 0x7f080021;
+        public static int app_name = 0x7f060021;
     }
     public static final class styleable {
         public static int[] RecyclerView = { 0x010100c4, 0x010100f1, 0x7f0100ef, 0x7f0100f0, 0x7f0100f1, 0x7f0100f2 };

@@ -1,21 +1,12 @@
-package duowan.soumao;
+package duowan.soumao.jsinterface;
 
 import android.content.Context;
-import android.os.Build;
-import android.support.annotation.RequiresApi;
-import android.webkit.ConsoleMessage;
 import android.webkit.JavascriptInterface;
-import android.webkit.ValueCallback;
-
-import com.google.gson.JsonObject;
 import com.just.library.AgentWeb;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.util.Map;
-
-import cn.droidlover.xdroidmvp.mvp.VDelegate;
 import cn.droidlover.xdroidmvp.mvp.VDelegateBase;
 
 /**
@@ -33,11 +24,6 @@ public class AndroidInterface {
 		this.agentWeb = agentWeb;
 	}
 
-	@JavascriptInterface
-	public void openCamera() {
-
-
-	}
 
 	@JavascriptInterface
 	public void showMessage(String me) {

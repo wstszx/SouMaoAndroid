@@ -14,7 +14,7 @@ public final class R {
         public static int x_loadingLayoutId = 0x7f01014c;
     }
     public static final class string {
-        public static int app_name = 0x7f080021;
+        public static int app_name = 0x7f060021;
     }
     public static final class styleable {
         public static int[] XStateController = { 0x7f01014b, 0x7f01014c, 0x7f01014d, 0x7f01014e };

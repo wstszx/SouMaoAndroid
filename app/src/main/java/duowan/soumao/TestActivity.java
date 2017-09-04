@@ -1,54 +1,41 @@
 package duowan.soumao;
 
 import android.app.Activity;
+import android.graphics.Bitmap;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
-import android.webkit.ConsoleMessage;
+import android.view.ViewGroup;
+import android.webkit.WebChromeClient;
+import android.webkit.WebResourceRequest;
 import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 
 import com.just.library.AgentWeb;
+import com.just.library.AgentWebSettings;
 import com.just.library.AgentWebView;
 import com.just.library.ChromeClientCallbackManager;
+import com.just.library.DownLoadResultListener;
+import com.just.library.PermissionInterceptor;
+import com.just.library.WebDefaultSettingsManager;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
-import cn.droidlover.xdroidmvp.mvp.VDelegateBase;
+import cn.droidlover.xdroidmvp.mvp.XActivity;
 import cn.droidlover.xdroidmvp.router.Router;
+import duowan.soumao.jsinterface.AndroidInterface;
+
 
 /**
  * Created by wstszx on 2017/8/21.
  */
 
-public class TestActivity extends AppCompatActivity {
+public class TestActivity extends XActivity {
+
 	@BindView(R.id.agent_webview)
 	AgentWebView agentWebview;
 	@BindView(R.id.linear_layout)
-	LinearLayout linearLayout;
+	RelativeLayout relativeLayout;
 	private AgentWeb agentWeb;
-
-	@Override
-	protected void onCreate(@Nullable Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		setContentView(R.layout.test);
-		ButterKnife.bind(this);
-		//传入Activity
-//传入AgentWeb 的父控件 ，如果父控件为 RelativeLayout ， 那么第二参数需要传入 RelativeLayout.LayoutParams
-// 使用默认进度条
-// 使用默认进度条颜色
-//设置 Web 页面的 title 回调
-//
-		agentWeb = AgentWeb.with(this)//传入Activity
-				.setAgentWebParent(linearLayout, new LinearLayout.LayoutParams(-1, -1))//传入AgentWeb 的父控件 ，如果父控件为 RelativeLayout ， 那么第二参数需要传入 RelativeLayout.LayoutParams
-				.useDefaultIndicator()// 使用默认进度条
-				.defaultProgressBarColor() // 使用默认进度条颜色
-				.setReceivedTitleCallback(mCallback) //设置 Web 页面的 title 回调
-				.createAgentWeb()//
-				.ready()
-				.go("file:///android_asset/testBridge.html");
-		agentWeb.getJsInterfaceHolder().addJavaObject("WebViewJavascriptBridge",new AndroidInterface(this,agentWeb));
-	}
 
 	public static void launch(Activity activity) {
 		Router.newIntent(activity)
@@ -62,4 +49,77 @@ public class TestActivity extends AppCompatActivity {
 
 		}
 	};
+
+	@Override
+	public void initData(Bundle savedInstanceState) {
+		agentWeb = AgentWeb.with(this)//传入Activity
+				.setAgentWebParent(relativeLayout,new RelativeLayout.LayoutParams(-1, -1))//传入AgentWeb 的父控件 ，如果父控件为 RelativeLayout ， 那么第二参数需要传入 RelativeLayout.LayoutParams
+				.useDefaultIndicator()// 使用默认进度条
+				.defaultProgressBarColor() // 使用默认进度条颜色
+				.setAgentWebSettings(getSettings())
+				.setWebViewClient(mWebViewClient)
+				.setWebChromeClient(mWebChromeClient)
+				.setPermissionInterceptor(mPermissionInterceptor)
+				.setReceivedTitleCallback(mCallback) //设置 Web 页面的 title 回调
+				.setSecutityType(AgentWeb.SecurityType.strict)
+				.addDownLoadResultListener(mDownLoadResultListener)
+				.createAgentWeb()//
+				.ready()
+				.go("file:///android_asset/upload_file/jsuploadfile.html");
+//		agentWeb.getJsInterfaceHolder().addJavaObject("WebViewJavascriptBridge", new AndroidInterface(this, agentWeb));
+
+	}
+
+	public AgentWebSettings getSettings() {
+		return WebDefaultSettingsManager.getInstance();
+	}
+
+	protected DownLoadResultListener mDownLoadResultListener=new DownLoadResultListener() {
+		@Override
+		public void success(String s) {
+
+		}
+
+		@Override
+		public void error(String s, String s1, String s2, Throwable throwable) {
+
+		}
+	};
+
+	protected WebChromeClient mWebChromeClient=new WebChromeClient(){
+		@Override
+		public void onProgressChanged(WebView view, int newProgress) {
+
+		}
+	};
+
+	protected WebViewClient mWebViewClient=new WebViewClient(){
+		@Override
+		public boolean shouldOverrideUrlLoading(WebView view, WebResourceRequest request) {
+			return super.shouldOverrideUrlLoading(view, request);
+		}
+
+		@Override
+		public void onPageStarted(WebView view, String url, Bitmap favicon) {
+
+		}
+	};
+
+	protected PermissionInterceptor mPermissionInterceptor=new PermissionInterceptor() {
+		@Override
+		public boolean intercept(String s, String[] strings, String s1) {
+			return false;
+		}
+	};
+
+	@Override
+	public int getLayoutId() {
+		return R.layout.test;
+	}
+
+	@Override
+	public Object newP() {
+		return null;
+	}
+
 }

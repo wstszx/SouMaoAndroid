@@ -45,8 +45,8 @@ dependencies {
     compile rootProject.ext.dependencies["rxlifecycle-android"]
     compile rootProject.ext.dependencies["rxlifecycle-components"]
     compile rootProject.ext.dependencies["rxpermissions"]
-    compile rootProject.ext.dependencies["agentweb"]
-    compile 'com.ashokvarma.android:bottom-navigation-bar:2.0.2'
+//    compile rootProject.ext.dependencies["agentweb"]
+    compile rootProject.ext.dependencies["bottomnavigationbar"]
 
 }
 

@@ -45,7 +45,8 @@ ext {
 
             "canary-debug"               : "com.squareup.leakcanary:leakcanary-android:1.4-beta2",
             "canary-release"             : "com.squareup.leakcanary:leakcanary-android-no-op:1.4-beta2",
-            "agentweb"             : "com.just.agentweb:agentweb:1.2.6",
+            "agentweb"                   : "com.just.agentweb:agentweb:2.0.0",
+            "bottomnavigationbar"        : "com.ashokvarma.android:bottom-navigation-bar:2.0.2",
 
     ]
 
