@@ -143,8 +143,6 @@ public class AgentWeb {
     }
 
     private void doCompat() {
-
-
         mJavaObjects.put("agentWeb", mAgentWebJsInterfaceCompat = new AgentWebJsInterfaceCompat(this, mActivity));
 
         LogUtils.i(TAG, "AgentWebConfig.isUseAgentWebView:" + AgentWebConfig.WEBVIEW_TYPE + "  mChromeClientCallbackManager:" + mChromeClientCallbackManager);
