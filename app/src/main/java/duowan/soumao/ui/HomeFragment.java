@@ -8,6 +8,7 @@ import cn.droidlover.xrecyclerview.RecyclerItemCallback;
 import duowan.soumao.R;
 import duowan.soumao.adapter.HomeAdapter;
 import duowan.soumao.baseui.BaseFragment;
+import duowan.soumao.constants.UrlConstants;
 import duowan.soumao.login.LoginP;
 import duowan.soumao.model.GankResults;
 import duowan.soumao.present.HomeP;
@@ -21,7 +22,6 @@ public class HomeFragment extends BaseFragment<HomeP> {
 
 	@Override
 	public void initData(Bundle savedInstanceState) {
-
 		getP().loadData();
 	}
 

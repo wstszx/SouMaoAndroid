@@ -34,9 +34,9 @@ public class LoginP extends XPresent<LoginActivity> {
 		}
 		getV().showDialog();
 		HashMap<String, String> map = new HashMap<>();
-		map.put("username", userName);
+		map.put("phone", userName);
 		map.put("password", passWord);
-		Api.getGankService().login("tokens", "login", map)
+		Api.getGankService().login(map)
 				.compose(XApi.<LoginBean>getApiTransformer())
 				.compose(XApi.<LoginBean>getScheduler())
 				.compose(getV().<LoginBean>bindToLifecycle())

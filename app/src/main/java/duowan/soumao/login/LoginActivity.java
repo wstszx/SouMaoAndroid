@@ -15,7 +15,7 @@ public class LoginActivity extends BaseActivity<LoginP> {
 
 	@Override
 	public void initData(Bundle savedInstanceState) {
-		getP().login("zengjie3","e10adc3949ba59abbe56e057f20f883e");
+		getP().login("18362052360","123456");
 	}
 
 	@Override

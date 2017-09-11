@@ -28,16 +28,16 @@
             android:name=".TestActivity"
             android:theme="@style/AppTheme.NoActionBar"
             android:configChanges="orientation|screenSize">
+
+        </activity>
+        <activity android:name=".login.LoginActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:configChanges="orientation|screenSize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
-        </activity>
-        <activity android:name=".login.LoginActivity"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:configChanges="orientation|screenSize">
-
         </activity>
 
         <provider
