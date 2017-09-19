@@ -7,7 +7,7 @@ import android.text.TextUtils;
  * Created by wanglei on 2016/11/28.
  */
 
-public class MemoryCache implements ICache {
+public class MemoryCache  implements ICache {
 
     private LruCache<String, Object> cache;
     private static MemoryCache instance;
@@ -29,7 +29,6 @@ public class MemoryCache implements ICache {
         }
         return instance;
     }
-
 
     @Override
     public synchronized void put(String key, Object value) {

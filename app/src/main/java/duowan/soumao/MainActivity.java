@@ -145,17 +145,17 @@ public class MainActivity extends BaseActivity
 		bottomNavigationBar.setBackgroundStyle(BottomNavigationBar.BACKGROUND_STYLE_STATIC);
 		bottomNavigationBar.setMode(BottomNavigationBar.MODE_FIXED);//适应大小
 		bottomNavigationBar
-				.addItem(new BottomNavigationItem(R.mipmap.ic_launcher, R.string.bottom_one_string)
-						.setInactiveIconResource(R.mipmap.ic_launcher_round)
+				.addItem(new BottomNavigationItem(R.mipmap.home2x, R.string.bottom_one_string)
+						.setInactiveIconResource(R.mipmap.home2x)
 						.setActiveColorResource(R.color.colorPrimaryDark))
-				.addItem(new BottomNavigationItem(R.mipmap.ic_launcher, R.string.bottom_two_string)
-						.setInactiveIconResource(R.mipmap.ic_launcher_round)
+				.addItem(new BottomNavigationItem(R.mipmap.leadmanagement2x, R.string.bottom_two_string)
+						.setInactiveIconResource(R.mipmap.leadmanagement2x)
 						.setActiveColorResource(R.color.colorPrimaryDark))
-				.addItem(new BottomNavigationItem(R.mipmap.ic_launcher, R.string.bottom_three_string)
-						.setInactiveIconResource(R.mipmap.ic_launcher_round)
+				.addItem(new BottomNavigationItem(R.mipmap.schedule2x, R.string.bottom_three_string)
+						.setInactiveIconResource(R.mipmap.schedule2x)
 						.setActiveColorResource(R.color.colorPrimaryDark))
-				.addItem(new BottomNavigationItem(R.mipmap.ic_launcher, R.string.bottom_four_string)
-						.setInactiveIconResource(R.mipmap.ic_launcher_round)
+				.addItem(new BottomNavigationItem(R.mipmap.mycenter2x, R.string.bottom_four_string)
+						.setInactiveIconResource(R.mipmap.mycenter2x)
 						.setActiveColorResource(R.color.colorPrimaryDark))
 				.setFirstSelectedPosition(0)//显示默认面板
 				.initialise();//初始化

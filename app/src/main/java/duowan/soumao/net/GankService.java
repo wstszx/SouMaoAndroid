@@ -19,15 +19,18 @@ import retrofit2.http.Query;
  */
 
 public interface GankService<T> {
+	//登陆
 	@FormUrlEncoded
 	@POST(UrlConstants.login)
 	Flowable<LoginBean> login(
 			@FieldMap Map<String, String> map
 	);
+
 	//发送验证码
-	@GET(UrlConstants.sendcode)
+	@FormUrlEncoded
+	@POST(UrlConstants.sendcode)
 	Flowable<SendCodeBean> sendcode(
 			@Header("authorization") String authorization,
-			@Query("userParam") String userParam
+			@Field("userParam") String userParam
 	);
 }
